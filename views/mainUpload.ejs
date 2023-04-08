@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/myUpload.css">
+    <title>Image Uploading</title>
+</head>
+  
+<body>
+    <h1>My upload page</h1>
+    <hr>
+    <div>
+        <form  method="POST" enctype="multipart/form-data" action="/mainUpload">
+            <div>
+                <label for="name">Image Title</label>
+                <input type="text" id="name" placeholder="Name" 
+                       value="" name="name" required>
+            </div>
+            <div>
+                <label for="distance">Distance</label>
+                <textarea id="distance" name="distance" value="" rows="1" 
+                          placeholder="Distance" required>
+                </textarea>
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <textarea id="date" name="date" value="" rows="1" 
+                          placeholder="Date and Time" required>
+                </textarea>
+            </div>
+            <div>
+                <label for="author">Author Name</label>
+                <input type="text" id="author" placeholder="Your name" 
+                       value="" name="author" required>
+            </div>
+            <div>
+                <label for="desc">Image Description</label>
+                <textarea id="desc" name="desc" value="" rows="10" 
+                          placeholder="Description" required>
+                </textarea>
+            </div>
+            <div>
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" 
+                       name="image" value="" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+  
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/static/userUpload.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">My Upload section</h1>
+
+    <form  method="POST" enctype="multipart/form-data" action="/mainUpload">
+        <div class="row">
+          <div class="col">
+
+            <input type="text" class="form-control" placeholder="Place name" id="name" name="name" required>
+
+          </div>
+          <div class="col">
+
+            <input type="text" class="form-control" placeholder="Distance" id="distance" name="distance" required>
+
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+              <input type="text" class="form-control" placeholder="Date" id="date" name="date" required>
+
+            </div>
+            <div class="col">
+
+              <input type="text" 
+              class="form-control" placeholder="Author" id="author" name="author" required>
+
+            </div>
+          </div>
+        <div class="form-group">
+            
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Love to hear your experience" id="desc" name="desc" required></textarea>
+
+        </div>
+    
+        <!-- <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile" id="image" name="image" required>Choose file</label>
+        </div> -->
+
+        <input type="file" id="image" 
+                       name="image" value="" required>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

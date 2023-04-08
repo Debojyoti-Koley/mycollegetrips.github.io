@@ -1,0 +1,253 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding : 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://images.pexels.com/photos/2819549/pexels-photo-2819549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size:cover;
+    background-position: center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 93%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #29b5dc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    transition: .5s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    /* height: 20px; */
+    cursor: pointer;
+}
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: aliceblue;
+}
+.content h1{
+    font-size: 70px;
+    /* font-weight: ; */
+    margin-top: 80px;
+}
+.content p{
+    margin: 10px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    cursor: pointer;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    border: 2px solid #29b5dc;
+    background: transparent;
+    color: white;
+
+    position: relative;
+}
+
+button::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #29b5dc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    transition: .5s;
+}
+button:hover:after{
+    width: 91%;
+    margin-left: 4.5%;
+}
+
+
+
+
+
+
+/* Heading & Paragraph */
+
+#between{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+    text-align: center;
+}
+
+#between h1{
+    font-family: 'Arima', cursive;
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+#between p{
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+.main_body{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.main_body h2{
+    font-size: 2rem;
+    margin-bottom: 1.5%;
+    color: rgb(1, 41, 97);
+}
+
+.main_body img{
+    height: 63vh;
+    width: 100%;
+}
+
+.paragraph{
+    margin-top: 2%;
+    margin-bottom: 6%;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 1.25rem;
+    line-height: 140%;
+}
+
+.info{
+    margin-top: 3%;
+}
+
+.main_body h5{
+    display:inline-block;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.3rem;
+    color: rgb(4, 54, 110);
+}
+.date_time{
+    display: inline-block;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-style: italic;
+    font-size: 1.22rem;
+}
+.dist{
+    display: inline-block;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.22rem;
+}
+
+
+
+
+#main-footer{
+	padding: 2em;
+	background: rgba(0, 0, 0, 0.953);
+	color: #fff;
+	text-align: center;
+}
+
+
+
+/* @media only screen and (min-width: 395px) and (max-width: 780px) */
+
+@media only screen and (max-width: 415px){
+    .banner h1{
+        margin: 1%;
+    }
+    .banner p{
+        margin: 2%;
+    }
+    .main_body{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .main_body img{
+        height: 30vh;
+        width: 100%;
+    }
+    .main_body h2 {
+        font-size: 2rem;
+        margin-bottom: 4.3%;
+        color: rgb(1, 41, 97);
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 780px){
+    .main_body{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .main_body img{
+        height: 35vh;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1200px){
+    .main_body{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .main_body img{
+        height: 45vh;
+        width: 100%;
+    }
+}

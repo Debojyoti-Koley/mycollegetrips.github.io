@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/all.css">
+    <title>My college trips</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;1,200&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+
+
+    <!-- Jumbotron -->
+
+    <div class="banner">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="https://mycollegetrips.herokuapp.com/">
+                <img src="https://img.icons8.com/plasticine/344/camera--v1.png" alt="logo" class="logo">
+            </a>  
+            <ul>
+                <li><a href="/static/auth.html">Upload</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>My college trips</h1>
+            <p>.. and in between freshers' and farewell, life happened</p>
+            <div>
+                <a href="#between">
+                <button>Lets get started!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Heading & Paragraph -->
+    <div id="between">
+        <h1>The memories I have made so far</h1>
+        <p>"Sharing adventures means enjoying them 100% more"</p>
+    </div>
+
+
+    
+
+
+    <!-- Main Section -->
+
+    <div class="main_body">
+        <% items.forEach(function(image) { %>
+        <div>
+            <div>
+                <h2><%= image.name %></h2>
+                <img src="data:image/<%=image.img.contentType%>;base64,
+                     <%=image.img.data.toString('base64')%>">
+                <div class="info">
+                    <h5>Author :</h5> <p class="dist"><%= image.author %></p>
+                    <br>
+                    <h5>Date : </h5><p class="date_time"><%= image.date %></p>
+                    <br>
+                    <h5>Distance :</h5> <p class="dist"><%= image.distance %></p>
+                </div>
+                
+                <p class="paragraph"><%= image.desc %></p>               
+            </div>
+        </div>
+        <br>
+        <% }) %>
+    </div>
+
+
+
+    <!-- About me -->
+
+
+    <footer id="main-footer" >
+        <div>
+            If you have any feedback , feel free to write me at
+            <a href="whitebunny816@gmail.com">whitebunny816@gmail.com</a>.
+            All rights received @copy.
+        </div>
+    </footer>  
+</body>
+</html>
